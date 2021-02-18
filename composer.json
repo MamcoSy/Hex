@@ -1,0 +1,14 @@
+{
+    "name": "mamadou/framework",
+    "description": "A simple php framework for building web applications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MamcoSy",
+            "email": "mamco.aly.sy@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {}
+}
