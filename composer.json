@@ -1,14 +1,45 @@
 {
-    "name": "mamadou/framework",
-    "description": "A simple php framework for building web applications",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "MamcoSy",
-            "email": "mamco.aly.sy@gmail.com"
-        }
-    ],
-    "minimum-stability": "alpha",
-    "require": {}
+  "name": "mamadou/framework",
+  "description": "A simple php framework for building web applications",
+  "keywords": [
+    "framework",
+    "php",
+    "Hex"
+  ],
+  "support": {
+    "source": "https://github.com/MamcoSy/Hex",
+    "issues": "https://github.com/MamcoSy/Hex/issues",
+    "wiki": "https://github.com/MamcoSy/Hex/wiki"
+  },
+  "type": "library",
+  "license": "MIT",
+  "readme": "",
+  "time": "",
+  "authors": [
+    {
+      "name": "MamcoSy",
+      "email": "mamco.aly.sy@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "alpha",
+  "require": {
+    "php": "7.4.2|^8.0",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-iconv": "*",
+    "ext-curl": "*",
+    "ext-simplexml": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hex\\": "./src/Hex"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HexTests\\": "./tests"
+    }
+  }
 }
