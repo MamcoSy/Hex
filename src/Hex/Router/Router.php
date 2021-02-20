@@ -9,7 +9,7 @@ use Exception;
 class Router implements RouterInterface
 {
     // Routing table
-    protected array $routes     = [];
+    protected array $routes = [];
 
     // Route parameters
     protected array $parameters = [];
@@ -46,20 +46,14 @@ class Router implements RouterInterface
                 {
                     call_user_func([$controllerObject, $action], $this->parameters);
                 }
-                else
-                {
-                    throw new Exception();
-                }
-            }
-            else
-            {
+
                 throw new Exception();
             }
-        }
-        else
-        {
+
             throw new Exception();
         }
+
+        throw new Exception();
     }
 
     /**
@@ -82,6 +76,7 @@ class Router implements RouterInterface
                         $cleanParameters[$key] = $value;
                     }
                 }
+
                 $this->parameters = $cleanParameters;
 
                 return true;
@@ -125,6 +120,7 @@ class Router implements RouterInterface
     private function addNamespace(string $controllerString): string
     {
         $defaultNamespace = 'App\Controller\\';
+
         if (array_key_exists('_namespace', $this->parameters))
         {
             $defaultNamespace .= $this->parameters['_namespace'];
